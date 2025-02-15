@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Escola</title>
+    <link rel="stylesheet" href="styles.css">
+<style>body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white; /* Removida a tela azul */
+    color: black;
+}
+
+#relogio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#botoes-spawn {
+    margin: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.escola {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sala, .cantina, .secretaria, .banheiro, .fraldario, .parquinho {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: lightgray;
+    color: black;
+}
+
+.personagem {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+}
+
+.aluno { background-color: green; }
+.professor { background-color: blue; }
+.professora-gravida { background-color: blue; border: 5px solid white; }
+.bebe { background-color: white; }
+.coordenador { background-color: black; }
+.segurança { background-color: purple; }
+.diretor { background-color: red; }
+.tia { background-color: pink; }
+.faxineira { background-color: yellow; color: black; }
+.ladrao { background-color: orange; }
+.xixi { background-color: yellow; width: 30px; height: 30px; border-radius: 50%; position: absolute; }</style>
+<body>
+    <h1>Simulação de Escola</h1>
+
+    <div id="relogio">Horário: 07:00 | Dia: Segunda-feira</div>
+
+    <div id="botoes-spawn">
+        <button onclick="spawnPersonagem('Aluno')">Spawn Aluno</button>
+        <button onclick="spawnPersonagem('Professor')">Spawn Professor</button>
+        <button onclick="spawnPersonagem('Professora Grávida')">Spawn Professora Grávida</button>
+        <button onclick="spawnPersonagem('Coordenador')">Spawn Coordenador</button>
+        <button onclick="spawnPersonagem('Segurança')">Spawn Segurança</button>
+        <button onclick="spawnPersonagem('Diretor')">Spawn Diretor</button>
+        <button onclick="spawnPersonagem('Tia da Cantina')">Spawn Tia da Cantina</button>
+        <button onclick="spawnPersonagem('Faxineira')">Spawn Faxineira</button>
+        <button onclick="spawnPersonagem('Ladrão')">Spawn Ladrão</button>
+    </div>
+
+    <div class="escola">
+        <div class="sala" id="sala1">1º Ano</div>
+        <div class="sala" id="sala2">2º Ano</div>
+        <div class="sala" id="sala3">3º Ano</div>
+        <div class="sala" id="sala4">4º Ano</div>
+        <div class="cantina">Cantina</div>
+        <div class="secretaria">Secretaria</div>
+        <div class="banheiro">Banheiro</div>
+        <div class="fraldario">Fraldário</div>
+        <div class="parquinho">Parquinho</div>
+    </div>
+
+    <script src="simulationschool.js"></script>
+</body>
+</html>
